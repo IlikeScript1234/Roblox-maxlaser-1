@@ -174,6 +174,7 @@ end)
 Tab3Section:NewButton("MaxUi Arsenal Hubs", "local script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Maxlaser456/Maxlaser/main/Arsenal"))()
 end)
-Tab1Section:NewButton("SycX Hubs", "local script", function()
+Tab1Section:NewButton("SycX Hubs", "creadit to SytroNight", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/Idk"))()
 end) 
+
