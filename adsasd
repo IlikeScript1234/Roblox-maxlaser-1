@@ -1,0 +1,40 @@
+local CoastingLibrary = loadstring(game:HttpGet("https://pastebin.com/raw/3gQQtaKX"))()
+
+local TutorialTab = CoastingLibrary:CreateTab("Tutorial")
+local MainSection = TutorialTab:CreateSection("Arsenal")
+local ConfigSection = TutorialTab:CreateSection("Skin")
+
+MainSection:CreateButton("ESP", function() -- Button Name In Brackets
+   print("Made By Maxlaser")   loadstring(game:HttpGet("https://pastebin.com/raw/UaZxki2v", true))()
+end)
+MainSection:CreateButton("Fast Fire", function() -- Button Name In Brackets
+   print("Made By Maxlaser.")  loadstring(game:HttpGet("https://pastebin.com/raw/SVVX3QNh" ,true))()
+end)
+MainSection:CreateButton("Invisble HitBox", function() -- Button Name In Brackets
+   print("Made By Maxlaser.")  loadstring(game:HttpGet("https://pastebin.com/raw/KpQhjvRQ",true))()
+end)
+MainSection:CreateButton("Gun Rgb", function() -- Button Name In Brackets
+   print("Made By Maxlaser.")  local c = 1 function zigzag(X)  return math.acos(math.cos(X * math.pi)) / math.pi end game:GetService("RunService").RenderStepped:Connect(function()  if game.Workspace.Camera:FindFirstChild('Arms') then   for i,v in pairs(game.Workspace.Camera.Arms:GetDescendants()) do    if v.ClassName == 'MeshPart' then      v.Color = Color3.fromHSV(zigzag(c),1,1)     c = c + .0001    end   end  end end)
+end)
+MainSection:CreateButton("Aimbot", function() -- Button Name In Brackets
+   print("Made By Maxlaser.")  loadstring(game:HttpGet("https://pastebin.com/raw/1Gp9c57U"))()
+   end)
+   MainSection:CreateButton("Noclip", function() -- Button Name In Brackets
+   print("Made By Maxlaser.")  loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/Noclip")()
+   end)
+   MainSection:CreateButton("TpKill", function() -- Button Name In Brackets
+   print("Made By Maxlaser.")  loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/Maxlaser%20Tpkill")()
+   end)
+   MainSection:CreateButton("More Coming Soon", function() -- Button Name In Brackets
+               game.StarterGui:SetCore("SendNotification", {
+    Title = "Coming soon";
+    Text = "More coming soon"; -- what the text says (ofc)
+    Duration = 60;
+})
+end)
+ConfigSection:CreateButton("Anti-Lag", function()
+print("Made By Maxlaser.")  loadstring(game:HttpGet"https://pastebin.com/raw/1uKqCUMv")()
+end)
+ConfigSection:CreateButton("Monkey Skin", function
+print("Made By Maxlsaer.")  loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/Maxlaser%20Monkey%20Skin")()
+end)
