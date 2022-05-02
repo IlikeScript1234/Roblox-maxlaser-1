@@ -1,0 +1,41 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F%22))()  
+local Window = Library.CreateLib("MaxUi Arsenal Perm", "BloodTheme")
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Main")
+local Tab2 = Window:NewTab("creadit maxlaser")
+local Tab2Section = Tab2:NewSection("This script by maxlaser")
+local Tab3 = Window:NewTab("Skin")
+local Tab3Section = Tab3:NewSection("Monkey Skin")
+Tab1Section:NewLabel("Join Discord Server")
+Tab1Section:NewButton("aimbot + hitbox hide", "HitBox Hide on", function()
+loadstring(game:httpget"https://pastebin.com/raw/3fircgxr%22)()   
+end)
+Tab1Section:NewButton("Lag Fixed", "Boost Fps", function()
+loadstring(game:httpget"https://pastebin.com/raw/GmpxmDHB%22)()   
+end)
+Tab1Section:NewButton("Inf Jumps", "Enables Inf Jumps", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+ if InfiniteJumpEnabled then
+  game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+ end
+end)
+end)
+
+Tab1Section:NewToggle("Fov", "Changes Fov", function(state)
+    if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+end)
+Tab1Section:NewButton("TpKill", "Let TpKill with aimbot", function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/Maxlaser%20Tpkill")()
+end)
+Tab3Section:NewButton("Monkey Skin", "Monkey Skin", function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/Maxlaser%20Monkey%20Skin")()
+end)
+Tab1Section:NewButton("No reload", "No reload Gun", function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/no%20reload")()
+end)
