@@ -1,0 +1,19 @@
+getglobal game
+getfield -1 ReplicatedStorage
+getfield -1 ChrModels
+getfield -1 Delinquent
+pushstring ElMonito MC
+setfield -2 Name
+getglobal game
+getfield -1 ReplicatedStorage
+getfield -1 ChrModels
+getfield -1 Monky
+pushstring Delinquent
+setfield -2 Name
+getglobal game
+getfield -1 Players
+getfield -1 LocalPlayer
+getfield -1 Data
+getfield -1 Skin
+pushstring Monky
+setfield -2 Value
