@@ -1,0 +1,53 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Welcome";
+    Text = "Welcome To Maxlaser Admin"; -- what the text says (ofc)
+    Duration = 60;
+})
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "sub";
+    Text = "Make sure like and sub Maxlaser"; -- what the text says (ofc)
+    Duration = 60;
+})
+game.StarterGui:SetCore("SendNotification", {
+    Title = "wait loaded";
+    Text = ";Loaded"; -- what the text says (ofc)
+    Duration = 60;
+})
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Admin commands";
+    Text = "say ;cmds For see Commands"; -- what the text says (ofc)
+    Duration = 60;
+})
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:connect(function(chat)
+    if chat:match(";cmds") then
+        game.StarterGui:SetCore("SendNotification", {
+    Title = "Commands";
+    Text = ";Fly ;RTX ;Fps ;Gamepass ;Keyboard"; -- what the text says (ofc)
+    Duration = 60;
+})
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Join My Discord For script";
+    Text = "Join My Discord Server and sub Maxlaser"; -- what the text says (ofc)
+    Duration = 60;
+})
+    elseif chat:match(";Fly") then
+        loadstring(game:HttpGet("https://pastebin.com/raw/h5QDPy6s%22))()  
+    elseif chat:match(";RTX") then
+        loadstring(game:HttpGet("https://pastebin.com/raw/wAZt2zc3%22))()  
+    elseif chat:match(";Fps") then
+        loadstring(game:HttpGet("https://pastebin.com/raw/rMrvVtZg%22))()  
+    elseif chat:match(";Gamepass") then
+loadstring(game:HttpGet("https://pastebin.com/raw/5bRiv3eh%22))()  
+    elseif chat:match(";Keyboard") then
+loadstring(game:HttpGet("https://pastebin.com/raw/kC3dAMvt%22))()  
+    elseif chat:match(";DeadNote") then
+        loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/DeadNote")()
+    elseif chat:match("PSX") then
+        loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/PSX")()
+    end
+end)
