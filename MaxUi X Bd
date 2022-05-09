@@ -1,0 +1,474 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))() 
+local Window = Library.CreateLib("MaxUi X Bedwars", "Ocean")
+
+local Tab1 = Window:NewTab("Blatant")
+local Tab2 = Window:NewTab("Other Hubs")
+local Tab3 = Window:NewTab("Themes")
+
+local Tab1Section = Tab1:NewSection("Blatant")
+local Tab2Section = Tab2:NewSection("All hubs")
+local Tab3Section = Tab3:NewSection("All Themes Kavo Ui")
+
+Tab1Section:NewToggle("KillAura", "Enables KillAura", function()
+while wait() do 
+
+for i,v in pairs(game.Players:GetPlayers()) do 
+
+game:GetService("ReplicatedStorage").BedWars.RemoteEvent:FireServer("DamagePlayer", game:GetService("Players").LocalPlayer, v) 
+
+end 
+
+end
+    print("...")
+end)
+Tab1Section:NewButton("NoClick Delay", "NoClick Delay", function(value)
+print(value)
+end)
+Tab1Section:NewSlider("NoClick Delay Speeds", 0, 150, 15, false, function(value)
+print(value)
+end)
+Tab1Section:NewToggle("Velocity", "No KnockBack 100%", function()
+local s = require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil
+s.applyKnockbackDirection = function(...)end
+s.applyKnockback = function(...)end
+    
+end)
+Tab1Section:NewToggle("Infinite Jumps", "Enables Inf Jumps", function()
+  local InfiniteJumpEnabled = true
+ game:GetService("UserInputService").JumpRequest:connect(function() 	
+    if InfiniteJumpEnabled then 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping") 	end end) end) 
+  print("...")
+Tab1Section:NewToggle("No Fall Damage", "By Syctro", function()
+local nofall = true
+    if callback then
+        if nofall then
+            spawn(function()
+                repeat
+                    wait()
+                    if nofall == false then
+                        return end
+
+                        game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.GroundHit:FireServer()
+                    until nofall == false
+                end)
+            end
+    else
+        local nofall = ture
+    end
+end)
+
+Tab1Section:NewButton("Speeds", "Make You Speeds", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+end)
+Tab1Section:NewButton("bed breaker", "not working", function()
+print("not work")
+end)
+Tab1Section:NewButton("Scaffold", "Make You Speeds", function()
+print("not work")
+end)
+Tab2Section:NewToggle("AutoToxic", "Use AutoToxic", function ()
+if state then
+        local choosePlayer = false --set true if you want to insult one person only
+local chosenPlayer = "" --if chosePlayer = true, type playername in quotes
+
+
+
+local Taunts = { --add as many as you wish
+  "EZ L TRASH THE KID",
+  "I'm Better then You",
+  "L",
+  "L",
+  "L", 
+
+}
+ end
+end)
+Tab1Section:NewButton("Infinite Yield", "Enables Inf Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    print("...")
+end)
+
+Tab1Section:NewToggle("Anti-Cheat Bypass", "Bypasses Anti-Cheat", function(state)
+    if state then
+local player = game.Players.LocalPlayer
+	repeat
+		wait()
+	until player:FindFirstChild("Backpack")
+	local Connection = game.DescendantAdded:Connect(function(Inst)
+		local Success, Error = pcall(function()
+			return Inst.DisplayOrder
+		end)
+		if tostring(Inst) ~= "DevConsoleMaster" and tostring(Inst) ~= "InputCatcher" and Error == "The current identity (2) cannot Class security check (lacking permission 1)" then
+			while true do
+			end
+		end
+	end)
+	local toSave = {}
+	local function saveScript(saved)
+		toSave[saved] = true
+		local storedName = saved.Name
+		saved:GetPropertyChangedSignal("Disabled"):connect(function()
+			if saved.Disabled then
+				local robloxlocked = pcall(function()
+					saved.Disabled = false
+				end)
+				if not robloxlocked then
+					while true do
+					end
+				end
+			end
+		end)
+		saved:GetPropertyChangedSignal("Name"):connect(function()
+			saved.Name = storedName
+		end)
+	end
+	for _, v in pairs(script.Parent:GetChildren()) do
+		if v:IsA("LocalScript") and (v.Name == "check" or v.Name == "checkDo") and v ~= script then
+			saveScript(v)
+		end
+	end
+	script.Parent.ChildRemoved:connect(function(child)
+		if toSave[child] then
+			local saved, cloned = pcall(function()
+				return child:Clone()
+			end)
+			if saved then
+				cloned.Parent = script.Parent
+				saveScript(cloned)
+			else
+				while true do
+				end
+			end
+		end
+	end)
+	local setUpCharacter = function(char)
+		wait(5)
+		for _, v in pairs(char:GetDescendants()) do
+			if v:IsA("BasePart") and v:FindFirstChildOfClass("TouchTransmitter") then
+				while true do
+				end
+			elseif v:IsA("BasePart") then
+				v.ChildAdded:connect(function(child)
+					if child:IsA("TouchTransmitter") then
+						while true do
+						end
+					end
+				end)
+			end
+		end
+		char:WaitForChild("HumanoidRootPart"):GetPropertyChangedSignal("CFrame"):connect(function()
+			while true do
+			end
+		end)
+	end
+	if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+		wait(5)
+		setUpCharacter(player.Character)
+	end
+	player.CharacterAdded:connect(function(char)
+		wait(5)
+		setUpCharacter(char)
+end)
+	player.Backpack.ChildAdded:Connect(function(added)
+		local toolCount = 0
+		for i, v in pairs(player.Backpack:GetChildren()) do
+			if v:IsA("Tool") then
+				toolCount = toolCount + 1
+			end
+		end
+		for i, v in pairs(player.Character:GetChildren()) do
+			if v:IsA("Tool") then
+				toolCount = toolCount + 1
+			end
+		end
+		for i, v in pairs(player:GetChildren()) do
+			if v:IsA("Tool") then
+				toolCount = toolCount + 1
+			end
+		end
+		if toolCount > 2 then
+			while true do
+			end
+		end
+	end)
+    end
+end)
+
+Tab2Section:NewButton("Softbed", "Credits To YZHacker", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/YZHacker0/BedwarsGUI/main/bad.lua", true))()
+    print("...")
+end)
+
+Tab2Section:NewButton("Vape Loaded", "Use Vape", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/Keyboard-FE/main/Protected%20(3).lua'),true))()
+
+end)
+
+Tab2Section:NewButton("Keyboard", "Load Keyboard", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/Keyboard-FE/main/Protected%20(3).lua'),true))()
+    print("Sub maxlaser")
+end)
+
+Tab2Section:NewButton("Animations Gui", "Credits To GamingScripter", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+    print("sub Maxlaser")
+end)
+Tab2Section:NewButton("MrLuizTechTV Lastst Version", "local script", function()
+loadstring(game:HttpGet("https://pastebin.com/LevJffwT", true))()
+end)
+Tab2Section:NewButton("Jn HH Bedwars Lastst Version", "local script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/scripts/main/JNHH%20op", true))()
+end)
+Tab3Section:NewButton("LightTheme", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/hZGNb4ed")() 
+end)
+Tab3Section:NewButton("DarkTheme", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/bMnWMnGw")() 
+end)
+Tab3Section:NewButton("GrapeTheme", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/R9MJL00Y")()
+end)
+Tab3Section:NewButton("BloodTheme", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/JCuZw8CE")()
+end)
+Tab3Section:NewButton("Midnight", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/GHa8Eix2")()
+end)
+Tab3Section:NewButton("Sentinel", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/xA5gCbc3")()
+end)
+Tab3Section:NewButton("Synapse", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/4hy1bZvM")()
+end)
+Tab3Section:NewButton("Ocean(you use)", "local script", function()
+
+end)local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))() 
+local Window = Library.CreateLib("MaxUi X Bedwars", "Ocean")
+
+local Tab1 = Window:NewTab("Blatant")
+local Tab2 = Window:NewTab("Other Hubs")
+local Tab3 = Window:NewTab("Themes")
+
+local Tab1Section = Tab1:NewSection("Blatant")
+local Tab2Section = Tab2:NewSection("All hubs")
+local Tab3Section = Tab3:NewSection("All Themes Kavo Ui")
+
+Tab1Section:NewToggle("KillAura", "Enables KillAura", function()
+while wait() do 
+
+for i,v in pairs(game.Players:GetPlayers()) do 
+
+game:GetService("ReplicatedStorage").BedWars.RemoteEvent:FireServer("DamagePlayer", game:GetService("Players").LocalPlayer, v) 
+
+end 
+
+end
+    print("...")
+end)
+Tab1Section:NewButton("NoClick Delay", "NoClick Delay", function(value)
+print(value)
+end)
+Tab1Section:NewSlider("NoClick Delay Speeds", 0, 150, 15, false, function(value)
+print(value)
+end)
+Tab1Section:NewToggle("Velocity", "No KnockBack 100%", function()
+local s = require(game:GetService("ReplicatedStorage").TS.damage["knockback-util"]).KnockbackUtil
+s.applyKnockbackDirection = function(...)end
+s.applyKnockback = function(...)end
+    
+end)
+Tab1Section:NewToggle("Infinite Jumps", "Enables Inf Jumps", function()
+  local InfiniteJumpEnabled = true
+ game:GetService("UserInputService").JumpRequest:connect(function() 	
+    if InfiniteJumpEnabled then 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping") 	end end) end) 
+  print("...")
+Tab1Section:NewToggle("No Fall Damage", "By Syctro", function()
+local nofall = true
+    if callback then
+        if nofall then
+            spawn(function()
+                repeat
+                    wait()
+                    if nofall == false then
+                        return end
+
+                        game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.GroundHit:FireServer()
+                    until nofall == false
+                end)
+            end
+    else
+        local nofall = ture
+    end
+end)
+
+Tab1Section:NewButton("Speeds", "Make You Speeds", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+end)
+Tab1Section:NewButton("bed breaker", "not working", function()
+print("not work")
+end)
+Tab1Section:NewButton("Scaffold", "Make You Speeds", function()
+print("not work")
+end)
+Tab1Section:NewButton("Infinite Yield", "Enables Inf Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    print("...")
+end)
+
+Tab1Section:NewToggle("Anti-Cheat Bypass", "Bypasses Anti-Cheat", function(state)
+    if state then
+local player = game.Players.LocalPlayer
+	repeat
+		wait()
+	until player:FindFirstChild("Backpack")
+	local Connection = game.DescendantAdded:Connect(function(Inst)
+		local Success, Error = pcall(function()
+			return Inst.DisplayOrder
+		end)
+		if tostring(Inst) ~= "DevConsoleMaster" and tostring(Inst) ~= "InputCatcher" and Error == "The current identity (2) cannot Class security check (lacking permission 1)" then
+			while true do
+			end
+		end
+	end)
+	local toSave = {}
+	local function saveScript(saved)
+		toSave[saved] = true
+		local storedName = saved.Name
+		saved:GetPropertyChangedSignal("Disabled"):connect(function()
+			if saved.Disabled then
+				local robloxlocked = pcall(function()
+					saved.Disabled = false
+				end)
+				if not robloxlocked then
+					while true do
+					end
+				end
+			end
+		end)
+		saved:GetPropertyChangedSignal("Name"):connect(function()
+			saved.Name = storedName
+		end)
+	end
+	for _, v in pairs(script.Parent:GetChildren()) do
+		if v:IsA("LocalScript") and (v.Name == "check" or v.Name == "checkDo") and v ~= script then
+			saveScript(v)
+		end
+	end
+	script.Parent.ChildRemoved:connect(function(child)
+		if toSave[child] then
+			local saved, cloned = pcall(function()
+				return child:Clone()
+			end)
+			if saved then
+				cloned.Parent = script.Parent
+				saveScript(cloned)
+			else
+				while true do
+				end
+			end
+		end
+	end)
+	local setUpCharacter = function(char)
+		wait(5)
+		for _, v in pairs(char:GetDescendants()) do
+			if v:IsA("BasePart") and v:FindFirstChildOfClass("TouchTransmitter") then
+				while true do
+				end
+			elseif v:IsA("BasePart") then
+				v.ChildAdded:connect(function(child)
+					if child:IsA("TouchTransmitter") then
+						while true do
+						end
+					end
+				end)
+			end
+		end
+		char:WaitForChild("HumanoidRootPart"):GetPropertyChangedSignal("CFrame"):connect(function()
+			while true do
+			end
+		end)
+	end
+	if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+		wait(5)
+		setUpCharacter(player.Character)
+	end
+	player.CharacterAdded:connect(function(char)
+		wait(5)
+		setUpCharacter(char)
+end)
+	player.Backpack.ChildAdded:Connect(function(added)
+		local toolCount = 0
+		for i, v in pairs(player.Backpack:GetChildren()) do
+			if v:IsA("Tool") then
+				toolCount = toolCount + 1
+			end
+		end
+		for i, v in pairs(player.Character:GetChildren()) do
+			if v:IsA("Tool") then
+				toolCount = toolCount + 1
+			end
+		end
+		for i, v in pairs(player:GetChildren()) do
+			if v:IsA("Tool") then
+				toolCount = toolCount + 1
+			end
+		end
+		if toolCount > 2 then
+			while true do
+			end
+		end
+	end)
+    end
+end)
+
+Tab2Section:NewButton("Softbed", "Credits To YZHacker", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/YZHacker0/BedwarsGUI/main/bad.lua", true))()
+    print("...")
+end)
+
+Tab2Section:NewButton("Vape Loaded", "Use Vape", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/Keyboard-FE/main/Protected%20(3).lua'),true))()
+
+end)
+
+Tab2Section:NewButton("Keyboard", "Load Keyboard", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/Keyboard-FE/main/Protected%20(3).lua'),true))()
+    print("Sub maxlaser")
+end)
+
+Tab2Section:NewButton("Animations Gui", "Credits To GamingScripter", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+    print("sub Maxlaser")
+end)
+Tab2Section:NewButton("MrLuizTechTV Lastst Version", "local script", function()
+loadstring(game:HttpGet("https://pastebin.com/LevJffwT", true))()
+end)
+Tab2Section:NewButton("Jn HH Bedwars Lastst Version", "local script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/scripts/main/JNHH%20op", true))()
+end)
+Tab3Section:NewButton("LightTheme", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/hZGNb4ed")() 
+end)
+Tab3Section:NewButton("DarkTheme", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/bMnWMnGw")() 
+end)
+Tab3Section:NewButton("GrapeTheme", "local script", function()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/GrapeTheme")()
+end)
+Tab3Section:NewButton("BloodTheme", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/JCuZw8CE")()
+end)
+Tab3Section:NewButton("Midnight", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/GHa8Eix2")()
+end)
+Tab3Section:NewButton("Sentinel", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/xA5gCbc3")()
+end)
+Tab3Section:NewButton("Synapse", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/4hy1bZvM")()
+end)
+Tab3Section:NewButton("Ocean(you use)", "local script", function()
+loadstring(game:HttpGet"https://pastebin.com/raw/grVeGrkU")()
+end)
