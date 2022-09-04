@@ -70,20 +70,6 @@ local themeStyles = {
         TextColor = Color3.fromRGB(0,0,0),
         ElementColor = Color3.fromRGB(224, 224, 224)
     },
-    Luna = { 
-        SchemeColor = Color3.fromRGB(126, 6, 232), 
-        Background = Color3.fromRGB(0, 0, 0), 
-        Header = Color3.fromRGB(31, 31, 31), 
-        TextColor = Color3.fromRGB(255,255,255), 
-        ElementColor = Color3.fromRGB(31, 31, 31) 
-      },
-    Private = {
-        SchemeColor = Color3.fromRGB(255, 212,0), 
-        Background = Color3.fromRGB(0, 0, 0), 
-        Header = Color3.fromRGB(31, 31, 31), 
-        TextColor = Color3.fromRGB(255,255,255), 
-        ElementColor = Color3.fromRGB(20, 20,20) 
-      },
     BloodTheme = {
         SchemeColor = Color3.fromRGB(227, 27, 27),
         Background = Color3.fromRGB(10, 10, 10),
@@ -127,11 +113,11 @@ local themeStyles = {
         ElementColor = Color3.fromRGB(24, 24, 24)
     },
     Serpent = {
-        SchemeColor = Color3.fromRGB(0, 166, 58),
-        Background = Color3.fromRGB(31, 41, 43),
-        Header = Color3.fromRGB(22, 29, 31),
-        TextColor = Color3.fromRGB(255,255,255),
-        ElementColor = Color3.fromRGB(22, 29, 31)
+        SchemeColor = Color3.fromRGB(255, 212,0), 
+        Background = Color3.fromRGB(0, 0, 0), 
+        Header = Color3.fromRGB(31, 31, 31), 
+        TextColor = Color3.fromRGB(255,255,255), 
+        ElementColor = Color3.fromRGB(20, 20,20) 
     }
 }
 local oldTheme = ""
