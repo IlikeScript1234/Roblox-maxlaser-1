@@ -75,6 +75,12 @@ local themeStyles = {
         Background = Color3.fromRGB(0, 0, 0), 
         Header = Color3.fromRGB(31, 31, 31), 
         TextColor = Color3.fromRGB(255,255,255), 
+        ElementColor = Color3.fromRGB(20, 20,2)
+    Laserware = {
+        SchemeColor = Color3.fromRGB(255, 212,0), 
+        Background = Color3.fromRGB(0, 0, 0), 
+        Header = Color3.fromRGB(168, 168, 168), 
+        TextColor = Color3.fromRGB(138,138,138), 
         ElementColor = Color3.fromRGB(20, 20,20) 
       },
     BloodTheme = {
@@ -82,7 +88,7 @@ local themeStyles = {
         Background = Color3.fromRGB(10, 10, 10),
         Header = Color3.fromRGB(5, 5, 5),
         TextColor = Color3.fromRGB(255,255,255),
-        ElementColor = Color3.fromRGB(20, 20, 20)
+        ElementColor = Color3.fromRGB(20, 20,20)
     },
     GrapeTheme = {
         SchemeColor = Color3.fromRGB(166, 71, 214),
@@ -166,6 +172,8 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.BloodTheme
     elseif themeList == "Corn" then
         themeList = themeStyles.Corn
+    elseif themeList == "Laserware" then
+        themeList = themeStyles.Laserware
     elseif themeList == "GrapeTheme" then
         themeList = themeStyles.GrapeTheme
     elseif themeList == "Ocean" then
