@@ -76,13 +76,14 @@ local themeStyles = {
         Header = Color3.fromRGB(31, 31, 31), 
         TextColor = Color3.fromRGB(255,255,255), 
         ElementColor = Color3.fromRGB(20, 20,2)
+    },
     Laserware = {
         SchemeColor = Color3.fromRGB(255, 93,93), 
         Background = Color3.fromRGB(0, 0, 0), 
         Header = Color3.fromRGB(5, 5, 5), 
         TextColor = Color3.fromRGB(138,138,138), 
         ElementColor = Color3.fromRGB(20, 20,2) 
-      },
+    },
     BloodTheme = {
         SchemeColor = Color3.fromRGB(227, 27, 27),
         Background = Color3.fromRGB(10, 10, 10),
