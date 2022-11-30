@@ -1,1 +1,2 @@
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeScript1234/Roblox-maxlaser-1/main/MaxUi%20X%20V2.0"))()
