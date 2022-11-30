@@ -857,4 +857,280 @@ end)
 Tab7Section:NewButton("SVamp Server", "jn server", "Maxlaser Server", function()
 setclipboard("https://discord.com/invite/HVtnThHsHx")
 end)
-end 
+elseif game.PlaceId == 10255454029 then
+print("pls join the game for loading script")
+elseif game.PlaceId == 11640391378 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("MaxUi X Bedwars Telanthric", "BloodTheme")
+
+local Tab1 = Window:NewTab("Credits")
+local Tab2 = Window:NewTab("Main")
+
+local Tab1Section = Tab1:NewSection("Credits to maxlasertech")
+local Tab2Section = Tab2:NewSection("Main")
+
+Tab2Section:NewToggle("Killaura", "Auto swinng sword when someones near you", function(state)
+if state then
+		
+			_G.InstaKillExploit = true
+
+			while _G.InstaKillExploit do wait()
+
+				if workspace[game.Players.LocalPlayer.Name]:FindFirstChild("wood_sword") then
+					local args = {
+						[1] = {
+							[1] = {
+								[1] = "\18",
+								[2] = "wood_sword",
+								[3] = nil,
+								[4] = Vector3.new(-0.6882433295249939, -5.313460338385312e-09, -0.7254799008369446),
+								[5] = {
+									[1] = nil,
+									[2] = nil,
+									[3] = nil,
+									[4] = nil,
+									[5] = nil,
+									[6] = nil,
+									[7] = nil,
+									[8] = nil,
+									[9] = nil,
+									[10] = nil,
+									[11] = nil,
+									[12] = game:GetService("Players").LocalPlayer.Character.LeftLowerLeg,
+									[13] = game:GetService("Players").LocalPlayer.Character.LeftFoot,
+									[14] = game:GetService("Players").LocalPlayer.Character.RightFoot,
+									[15] = game:GetService("Players").LocalPlayer.Character.RightLowerLeg,
+									[16] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg,
+									[17] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg,
+									[18] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+									[19] = game:GetService("Players").LocalPlayer.Character.LeftLowerArm,
+									[20] = game:GetService("Players").LocalPlayer.Character.LowerTorso,
+									[21] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+									[22] = game:GetService("Players").LocalPlayer.Character.UpperTorso,
+									[23] = game:GetService("Players").LocalPlayer.Character.RightLowerArm,
+									[24] = game:GetService("Players").LocalPlayer.Character.wood_sword.Handle,
+									[25] = game:GetService("Players").LocalPlayer.Character.wood_sword.SwordPart,
+									[26] = game:GetService("Players").LocalPlayer.Character.RightUpperArm,
+									[27] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm,
+									[28] = nil,
+									[29] = game:GetService("Players").LocalPlayer.Character.RightHand,
+									[30] = game:GetService("Players").LocalPlayer.Character.wood_sword.SwordPart,
+									[31] = game:GetService("Players").LocalPlayer.Character.wood_sword.SwordPart,
+									[32] = game:GetService("Players").LocalPlayer.Character.Head,
+									[33] = nil
+								}
+							}
+						}
+					}
+
+					game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+				end
+
+			end
+		else
+			_G.InstaKillExploit = false
+
+			while _G.InstaKillExploit do wait()
+
+				if workspace[game.Players.LocalPlayer.Name]:FindFirstChild("wood_sword") then
+					local args = {
+						[1] = {
+							[1] = {
+								[1] = "\18",
+								[2] = "wood_sword",
+								[3] = nil,
+								[4] = Vector3.new(-0.6882433295249939, -5.313460338385312e-09, -0.7254799008369446),
+								[5] = {
+									[1] = nil,
+									[2] = nil,
+									[3] = nil,
+									[4] = nil,
+									[5] = nil,
+									[6] = nil,
+									[7] = nil,
+									[8] = nil,
+									[9] = nil,
+									[10] = nil,
+									[11] = nil,
+									[12] = game:GetService("Players").LocalPlayer.Character.LeftLowerLeg,
+									[13] = game:GetService("Players").LocalPlayer.Character.LeftFoot,
+									[14] = game:GetService("Players").LocalPlayer.Character.RightFoot,
+									[15] = game:GetService("Players").LocalPlayer.Character.RightLowerLeg,
+									[16] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg,
+									[17] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg,
+									[18] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+									[19] = game:GetService("Players").LocalPlayer.Character.LeftLowerArm,
+									[20] = game:GetService("Players").LocalPlayer.Character.LowerTorso,
+									[21] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+									[22] = game:GetService("Players").LocalPlayer.Character.UpperTorso,
+									[23] = game:GetService("Players").LocalPlayer.Character.RightLowerArm,
+									[24] = game:GetService("Players").LocalPlayer.Character.wood_sword.Handle,
+									[25] = game:GetService("Players").LocalPlayer.Character.wood_sword.SwordPart,
+									[26] = game:GetService("Players").LocalPlayer.Character.RightUpperArm,
+									[27] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm,
+									[28] = nil,
+									[29] = game:GetService("Players").LocalPlayer.Character.RightHand,
+									[30] = game:GetService("Players").LocalPlayer.Character.wood_sword.SwordPart,
+									[31] = game:GetService("Players").LocalPlayer.Character.wood_sword.SwordPart,
+									[32] = game:GetService("Players").LocalPlayer.Character.Head,
+									[33] = workspace.PlacedItems.UnseperatedMap.concrete.concrete
+								}
+							}
+						}
+					}
+
+					game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+				end
+
+			end
+		end
+end)
+Tab2Section:NewToggle("Flight", "Fly", function(state)
+    if state then
+				workspace.Gravity = 0
+		else
+			workspace.Gravity = 196.2
+		end
+		end)
+Tab2Section:NewToggle("AntiVoid", "invisble antivoid", function(state)
+	    if state then
+			AntivoidEnabled = true
+			repeat wait()
+				if lplr.Character.HumanoidRootPart.Position.Y < 1 then
+					local e = Instance.new("BodyVelocity",lplr.Character.HumanoidRootPart)
+					workspace.Gravity = 0
+					e.Velocity = Vector3.new(lplr.Character.HumanoidRootPart.Velocity.X,130,lplr.Character.HumanoidRootPart.Velocity.Z)
+					task.wait(0.5)
+					e:Destroy()
+					workspace.Gravity = 196.2
+				end
+			until not AntivoidEnabled
+		else
+			AntivoidEnabled = false
+		end
+		end)
+		Tab2Section:NewToggle("Normal Nuke", "Normal Break Bed", function(state)
+			if state then		
+			AutoToxicEnabled = true
+			repeat task.wait(0.1)
+				for _,v in pairs(workspace.PlacedItems:GetChildren()) do
+					if v.Name == "bed" then
+						local args = {
+							[1] = {
+								[1] = {
+									[1] = "11",
+									[2] = "wooden_pickaxe",
+
+									[3] = v
+								}
+							}
+						}
+
+						game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+					end
+				end
+			until not AutoToxicEnabled
+		else
+			AutoToxicEnabled = false
+		end
+		end)
+		Tab2Section:NewToggle("Fast Nuke", "Fast Break Bed", function(state)
+			if state then		
+					
+			AutoToxicEnabled = true
+			repeat task.wait(0.1)
+				for _,v in pairs(workspace.PlacedItems:GetChildren()) do
+						local args = {
+							[1] = {
+								[1] = {
+									[1] = "\11",
+									[2] = "wooden_pickaxe",
+
+									[3] = v
+								}
+							}
+						}
+
+						game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+					end
+			until not AutoToxicEnabled
+		else
+			AutoToxicEnabled = false
+		end
+		end)
+Tab2Section:NewSlider("Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Tab2Section:NewButton("AutoLeave When Mod Join", "leave/kick with mod join", function()
+_G.Enabled = true;
+
+_G.CertainPlayer = false; --Set to false if you want it to kick you if anyone joins and true if you want to use playerlist
+
+_G.Kick = true; --If it kicks you or just gives a notification that someone joined
+
+playerlist = {"Telanthric","XxShadowPlayz786xX","MenacingRengokuDonut","Turbine2002","EvanChan0819Skyblock","iamEvanRBLX",} -- Just add more if you want too
+--------------------------------------------------------------------------------------SCRIPT
+if(_G.Enabled == true) then
+
+game:GetService("Players").PlayerAdded:Connect(function(user)
+local Time = os.date("*t")
+
+if(_G.CertainPlayer == false) then
+        if (_G.Kick == true) then
+    game.Players.LocalPlayer:Kick("A player joined: "..user.Name.." ,at: "..Time.hour..":"..Time.min)
+    end
+    if(_G.Kick == false) then
+print(user.name.." Joined your game at ".." ,at: "..Time.hour..":"..Time.min.." and Wrote PlayersJoined.txt file in workspace/AutoDisconnect")
+game.StarterGui:SetCore("SendNotification", {
+Title = user.name.." Joined!";
+Text = "At "..Time.hour..":"..Time.min.." and wrote PlayersJoined.txt in workspace/AutoDisconnect folder";
+Duration = 5;
+})
+
+makefolder("AutoDisconnect")
+writefile("AutoDisconnect\\PlayerJoined.txt",
+user.name.." joined at "..Time.hour..":"..Time.min
+    )
+
+end
+if(_G.Kick == true) then
+    game.Players.LocalPlayer:Kick("A player joined: "..user.Name.." ,at: "..Time.hour..":"..Time.min)
+    end
+end
+
+
+
+if(_G.CertainPlayer == true) then
+    
+for i = 1, #playerlist do
+   
+if(user.Name == playerlist[i]) then
+        if(_G.Kick == true) then
+  game.Players.LocalPlayer:Kick("A player from the playerlist joined: "..playerlist[i].." ,at: "..Time.hour..":"..Time.min)
+       end
+    
+if(_G.Kick == false) then
+print(playerlist[i].." from playerlist Joined your game at ".." ,at: "..Time.hour..":"..Time.min.." and Wrote PlayersJoinedLIST.txt file in workspace/AutoDisconnect")
+game.StarterGui:SetCore("SendNotification", {
+Title = playerlist[i].." Joined!";
+Text = "At "..Time.hour..":"..Time.min.." and wrote PlayersJoinedLIST.txt in workspace/AutoDisconnect folder";
+Duration = 5;
+})    
+makefolder("AutoDisconnect")
+writefile("AutoDisconnect\\PlayerJoinedLIST.txt",
+playerlist[i].." from playerlist joined at "..Time.hour..":"..Time.min
+    )
+end
+end
+end
+end
+end)
+end
+end)
+Tab2Section:NewButton("Teleport to red bed", "teleport red bed", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(41.8792534, 1.4999994, 283.468719, -0.670487404, 1.99966976e-08, -0.741920948, 8.9436778e-09, 1, 1.88700344e-08, 0.741920948, 6.01661787e-09, -0.670487404)
+end)
+Tab2Section:NewButton("Teleport to blue bed", "teleport blue bed", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(41.8792534, 1.4999994, 283.468719, -0.670487404, 1.99966976e-08, -0.741920948, 8.9436778e-09, 1, 1.88700344e-08, 0.741920948, 6.01661787e-09, -0.670487404)
+end)
+
