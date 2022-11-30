@@ -1133,4 +1133,4 @@ end)
 Tab2Section:NewButton("Teleport to blue bed", "teleport blue bed", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(41.8792534, 1.4999994, 283.468719, -0.670487404, 1.99966976e-08, -0.741920948, 8.9436778e-09, 1, 1.88700344e-08, 0.741920948, 6.01661787e-09, -0.670487404)
 end)
-
+end
